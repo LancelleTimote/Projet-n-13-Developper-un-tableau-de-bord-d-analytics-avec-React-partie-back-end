@@ -1,64 +1,78 @@
-# Project 9 - Front-end Dashboard
+# Projet n°13 : Développer un tableau de bord d'analytics avec React partie back-end
 
-This repo contains all the source code to run the micro API for the sports analytics dashboard SportSee.
+![GitHub contributors](https://img.shields.io/github/contributors/LancelleTimote/Projet-n-13-Developper-un-tableau-de-bord-d-analytics-avec-React-partie-back-end?style=for-the-badge&color=green)
+![GitHub language count](https://img.shields.io/github/languages/count/LancelleTimote/Projet-n-13-Developper-un-tableau-de-bord-d-analytics-avec-React-partie-back-end?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/LancelleTimote/Projet-n-13-Developper-un-tableau-de-bord-d-analytics-avec-React-partie-back-end?style=for-the-badge)
+![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/LancelleTimote/Projet-n-13-Developper-un-tableau-de-bord-d-analytics-avec-React-partie-back-end?style=for-the-badge)
+![GitHub License](https://img.shields.io/github/license/LancelleTimote/Projet-n-13-Developper-un-tableau-de-bord-d-analytics-avec-React-partie-back-end?style=for-the-badge)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/timote-lancelle-devweb/)
 
-## 1. General information
+## :mag: Aperçu
 
-To start this project, you are free to use Docker or not. In this documentation, we will see several methods to launch the project easily.
+![Aperçu du site web](visuel_projet/visuel_projet.png)
 
-## 2. Project (**without Docker**)
+## :bookmark_tabs: Sommaire
 
-### 2.1 Prerequisites
+<ol>
+    <li><a href="#sujet">Sujet</a></li>
+    <li><a href="#demandes_respecter">Demandes à respecter</a></li>
+    <li><a href="#objectifs_projet">Objectifs du projet</a></li>
+    <li><a href="#technologies_utilisees">Technologies utilisées</a></li>
+    <li><a href="#prerequis">Prérequis</a></li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#utilisation_siteweb">Utilisation du site web</a></li>
+    <li><a href="#auteurs_contributeurs">Auteurs et contributeurs</a></li>
+    <li><a href="#licence">Licence</a></li>
+</ol>
 
-- [NodeJS (**version 12.18**)](https://nodejs.org/en/)
-- [Yarn](https://yarnpkg.com/)
+## :page_facing_up: 1. Sujet <a name = "sujet"></a>
 
-If you are working with several versions of NodeJS, we recommend you install [nvm](https://github.com/nvm-sh/nvm). This tool will allow you to easily manage your NodeJS versions.
+Vous travaillez en tant que développeur chez SportSee, une startup dédiée au coaching sportif.
 
-### 2.2 Launching the project
+En pleine croissance, l’entreprise va aujourd’hui lancer une nouvelle version de la page profil de l’utilisateur.
 
-- Fork the repository
-- Clone it on your computer.
-- The `yarn` command will allow you to install the dependencies.
-- The `yarn dev` command will allow you to run the micro API.
+Cette page va notamment permettre à l’utilisateur de suivre le nombre de sessions réalisées ainsi que le nombre de calories brûlées.
 
+## :memo: 2. Demandes à respecter <a name = "demandes_respecter"></a>
 
-## 3. Project (**with Docker**)
+- Développer l'application web en utilisant React et React Router ;
+- Utiliser Recharts pour faire les graphiques ;
+- Utiliser Fetch ou Axios pour la gestion des calls API ;
+- Possibilité d'utiliser des données Mock et venant d'une API ;
+- Utiliser les proptypes pour définir des contraintes sur l'utilisation des données ;
+- L'application doit être responsive sur les écrans d’au moins 1024 par 780 pixels ;
+- Respecter la maquette.
 
-### 2.1 Prerequisites
+## :checkered_flag: 3. Objectifs du projet <a name = "objectifs_projet"></a>
 
-- [Docker Desktop](https://www.docker.com/products/docker-desktop)
+- Apprendre à utiliser React, React Router, Recharts, Fetch, Axios, et les proptypes.
 
-### 2.2 Starting the project
+## :computer: 4. Technologies utilisées <a name = "technologies_utilisees"></a>
 
-- The `docker image build --no-cache -t micro-api .` command will allow you to build your image.
-- The `docker container run --name micro-api -p 3000:3000 -dt micro-api yarn` command will allow you to create your Docker container and run your image on port 3000.
-- The `docker container stop micro-api` command will allow you to stop your micro-api.
-- The `docker container rm micro-api` command will allow you to delete your micro-api container.
+- HTML
+- CSS / Sass
+- JavaScript / React.js
+- Git & GitHub
 
-### 2.3 Vscode and container remotes
+## :exclamation: 5. Prérequis <a name = "prerequis"></a>
 
-Finally, if you have VsCode, you can easily launch your project in a docker environment.
+- Aucun
 
-You will need the [Remote Development extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack). Once you have this extension installed, just click on the `Reopen in Container` button.
+## :wrench: 6. Installation <a name = "installation"></a>
 
-Once in the container, run the `yarn dev` command.
+- Cloner ce repository.
+- Pour installer les différents packages, dans le terminal à partir du dossier back-end, exécuter npm install.
 
-## 4. Endpoints
+## :question: 7. Utilisation du site web <a name = "utilisation_siteweb"></a>
 
-### 4.1 Possible endpoints
+- Dans le terminal à partir du dossier back-end, exécuter npm run dev ;
+- Suivre les indications d'utilisation pour le front-end ;
+- L'application est disponible sur : http://localhost:4000/
 
-This project includes four endpoints that you will be able to use: 
+## :beers: 8. Auteurs et Contributeurs <a name = "auteurs_contributeurs"></a>
 
-- `http://localhost:3000/user/${userId}` - retrieves information from a user. This first endpoint includes the user id, user information (first name, last name and age), the current day's score (todayScore) and key data (calorie, macronutrient, etc.).
-- `http://localhost:3000/user/${userId}/activity` - retrieves a user's activity day by day with kilograms and calories.
-- `http://localhost:3000/user/${userId}/average-sessions` - retrieves the average sessions of a user per day. The week starts on Monday.
-- `http://localhost:3000/user/${userId}/performance` - retrieves a user's performance (energy, endurance, etc.).
+Timoté Lancelle : [GitHub](https://github.com/LancelleTimote) / [LinkedIn](https://www.linkedin.com/in/timote-lancelle-devweb/)
 
+## :page_with_curl: 9. Licence <a name = "licence"></a>
 
-**Warning, currently only two users have been mocked. They have userId 12 and 18 respectively.**
-
-### 4.2 Examples of queries
-
-- `http://localhost:3000/user/12/performance` - Retrieves the performance of the user with id 12
-- `http://localhost:3000/user/18` - Retrieves user 18's main information.
+Distribué sous la licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus d'informations.
